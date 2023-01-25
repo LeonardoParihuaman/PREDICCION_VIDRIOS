@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Prediccion del Vidrio : CERTUS</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon1.ico" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <style>
+  	body {background-image: url('../static/img/world.jpg');    background-repeat: no-repeat; background-attachment: fixed; background-size:cover;}
+  </style>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body text="black">
+	
+	
+	<div class="login">
+
+		<center>
+			<form action="{{ url_for('predict')}}"method="post">
+				<h1>PREDICCION VIDRIO </h1><h2>SOLUCION CERTUS</h2><h2>       INGRESE LOS CAMPOS</h2>
+				<input type="text" name="RI" placeholder="mean ri" required="required" />
+				<input type="text" name="Na" placeholder="mean na" required="required" />
+				<input type="text" name="MG" placeholder="mean mg" required="required" />
+				<input type="text" name="Al" placeholder="mean al" required="required" />
+				<input type="text" name="Si" placeholder="mean si" required="required" />
+				<input type="text" name="K" placeholder="mean k" required="required" />
+				<br>
+				<input type="text" name="Ca" placeholder="mean Ca" required="required" />
+				<input type="text" name="Ba" placeholder="mean Ba" required="required" />
+				<input type="text" name="Fe" placeholder="mean Fe" required="required" />
+				<br>
+
+				<!-- show button-->
+				<div class="button_cont" align="center"><a class="button_css">
+					<button text="blue" type="submit" class="btn btn-primary btn-block btn-large"><strong><h4>CLICK PARA PREDECIR </h4></strong>
+
+					</button></a>
+				</div>
+			</form>
+		</center> <!--Show predicted output using ML model-->
+		<div>
+			<center>
+				<h1>{{ prediction_text}}</h1>
+				<h2>
+				</h2>
+					</center>
+			</div>
+
+
+
+
+
+</html>
